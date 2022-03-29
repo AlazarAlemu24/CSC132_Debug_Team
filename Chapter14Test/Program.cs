@@ -16,7 +16,7 @@ namespace Chapter14StudentApp
             const string DELIM = ",";
             const string FILENAME = "StudentData.txt";
             Student stu = new Student();
-            FileStream outFile = FileStream(FILENAME, FileMode.Create, FileAccess.Write);
+            FileStream outFile = new FileStream(FILENAME, FileMode.Create, FileAccess.Write);
             StreamWriter writer = new StreamWriter(outFile);
             Write("Enter student number or " + END + " to quit ");
             stu.StuNum = Convert.ToInt32(ReadLine());
