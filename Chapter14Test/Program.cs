@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using static System.Console;
 
 namespace Chapter14StudentApp
 {
@@ -22,11 +24,11 @@ namespace Chapter14StudentApp
             {
                 Write("Enter last name ");
                 stu.Name = ReadLine();
-                Write("Enter grade point average ")
-               stu.Gpa = Convert.ToDouble(ReadLine());
+                Write("Enter grade point average ");
+                stu.Gpa = Convert.ToDouble(ReadLine());
                 writer.WriteLine(stu.StuNum + DELIM + stu.Name + DELIM + stu.Gpa);
                 Write("Enter next student number or " + END + " to quit ");
-                stu.StuNum = Convert.ToInt(ReadLine());
+                stu.StuNum = Convert.ToInt32(ReadLine());
             }
 
             writer.Close();
@@ -38,7 +40,7 @@ namespace Chapter14StudentApp
     {
         private int stuNum;
         private string name;
-        private doubel gpa;
+        private double gpa;
         private const double MINGPA = 0.0;
         private const double MAXGPA = 4.0;
         public int StuNum { get; set; }
